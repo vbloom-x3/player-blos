@@ -18,7 +18,7 @@ tmplog="$(mktemp --suffix=.log)"
 libblos -d "$input" "$tmpfile" > "$tmplog" 
 
 # Run the Python player, pass wav as file and .blos name as display name
-python3 ~/.local/bin/player-blos.py "$tmpfile" "$base"
+python3 ~/.local/bin/player-blos.py "$tmpfile" "${base%.blos}"
 
 # Clean up temp wav after playback
 rm -f "$tmpfile" "$tmplog"

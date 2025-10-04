@@ -9,11 +9,11 @@ force-i:
 	pip install -r requirements.txt --break-system-packages
 
 install-player:
-	cd src
 	chmod +x src/main.sh
+	chmod +x src/playlist.sh
 	cp src/main.sh ~/.local/bin/player-blos
 	cp src/main.py ~/.local/bin/player-blos.py
-	cd ..
+	cp src/playlist.sh ~/.local/bin/playlist
 	@echo "player-blos	   -> Run the music player"
 
 clean:
